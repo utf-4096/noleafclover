@@ -29,16 +29,18 @@ namespace spades{
 		
 		//Chameleon: scope zoom
 		void ScriptIViewToolSkin::SetScopeZoom(int v) {
+			// Broke ATM for some reason,
+			// need to fix - utf
 			SPADES_MARK_FUNCTION_DEBUG();
-			static ScriptFunction func("IViewToolSkin",
-				"void set_ScopeZoom(int)");
-			ScriptContextHandle ctx = func.Prepare();
-			int r;
-			r = ctx->SetObject((void *)obj);
-			ScriptManager::CheckError(r);
-			r = ctx->SetArgDWord(0, (asDWORD)v);
-			ScriptManager::CheckError(r);
-			ctx.ExecuteChecked();
+			// static ScriptFunction func("IViewToolSkin",
+			// 						   "void set_ScopeZoom(int)");
+			// ScriptContextHandle ctx = func.Prepare();
+			// int r;
+			// r = ctx->SetObject((void *)obj);
+			// ScriptManager::CheckError(r);
+			// r = ctx->SetArgDWord(0, (asDWORD)v);
+			// ScriptManager::CheckError(r);
+			// ctx.ExecuteChecked();
 		}
 
 		void ScriptIViewToolSkin::SetEyeMatrix(Matrix4 m) {
@@ -121,8 +123,9 @@ namespace spades{
 						break;
 					case PhaseObjectMember:
 						//Chameleon: scope
-						r = eng->RegisterInterfaceMethod("IViewToolSkin",
-														 "void set_ScopeZoom(int)");
+						// r = eng->RegisterInterfaceMethod("IViewToolSkin",
+						// 								 "void set_ScopeZoom(int)");
+						// manager->CheckError(r);
 
 						r = eng->RegisterInterfaceMethod("IViewToolSkin",
 														 "void set_EyeMatrix(Matrix4)");

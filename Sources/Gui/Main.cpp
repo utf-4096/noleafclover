@@ -158,7 +158,7 @@ class ThreadQuantumSetter {
 
 SPADES_SETTING(cg_lastQuickConnectHost, "");
 SPADES_SETTING(cg_protocolVersion, "");
-SPADES_SETTING(cg_playerName, "/cg_playerName");
+SPADES_SETTING(cg_playerName, "Deuce");
 int cg_autoConnect = 0;
 bool cg_printVersion = false;
 bool cg_printHelp = false;
